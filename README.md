@@ -13,7 +13,7 @@ torchvision >=0.6.0
 ```
 ## result
 we trained this repo on 4 GPUs with batch size 32(8 image per node).the total epoch is 24(about 180k iter),Adam with cosine lr decay is used for optimizing.
-finally, this repo achieves 39.4 mAp at 736px(max thresh) resolution with resnet50 backbone.(about 21.94)
+finally, this repo achieves 41.2 mAp at 736px(max thresh) resolution with resnet50 backbone.(about 21.94)
 ```shell script
 Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.412
 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.605

@@ -1,4 +1,4 @@
-model_name: faster_rcnn
+model_name: cascade_rcnn
 data:
   train_annotation_path: /home/huffman/data/coco/annotations/instances_train2017.json
 #  train_annotation_path: /home/huffman/data/coco/annotations/instances_val2017.json

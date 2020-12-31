@@ -1,0 +1,45 @@
+model_name: faster_rcnn
+data:
+  train_annotation_path: /home/huffman/data/coco/annotations/instances_train2017.json
+#  train_annotation_path: /home/huffman/data/coco/annotations/instances_val2017.json
+  val_annotation_path: /home/huffman/data/coco/annotations/instances_val2017.json
+  train_img_root: /home/huffman/data/coco/train2017
+#  train_img_root: /home/huffman/data/coco/val2017
+  val_img_root: /home/huffman/data/coco/val2017
+  max_thresh: 768
+  use_crowd: False
+  batch_size: 8
+  num_workers: 4
+  debug: False
+  remove_blank: Ture
+
+model:
+  num_cls: 80
+  backbone: resnet50
+  pretrained: True
+  reduction: False
+  fpn_channel: 256
+  fpn_bias: True
+  anchor_sizes: [32.0, 64.0, 128.0, 256.0, 512.0]
+  anchor_scales: [1.0, ]
+  anchor_ratios: [0.5, 1.0, 2.0]
+  strides: [4.0, 8.0, 16.0, 32.0, 64.0]
+  box_score_thresh: 0.05
+  box_nms_thresh: 0.5
+  box_detections_per_img: 100
+
+optim:
+  optimizer: Adam
+  lr: 0.0001
+  milestones: [24,]
+  warm_up_epoch: 0
+  weight_decay: 0.0001
+  epochs: 24
+  sync_bn: True
+  amp: True
+val:
+  interval: 1
+  weight_path: weights
+
+
+gpus: 0,1,2,3

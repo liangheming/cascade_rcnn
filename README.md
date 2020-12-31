@@ -1,4 +1,4 @@
-# ATSS_RetinaNet
+# Cascade RCNN
 This is an unofficial pytorch implementation of CascadeRCNN object detection as described in [Cascade R-CNN Delving into High Quality Object Detection](https://arxiv.org/abs/1712.00726) by Zhaowei Cai and Nuno Vasconcelos
 
 ## requirement

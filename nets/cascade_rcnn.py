@@ -653,8 +653,8 @@ class CascadeRCNN(nn.Module):
         self.anchors = None
         rpn_head = RPNHead(self.cfg['fpn_channel'], anchor_per_grid=self.anchor_generator.anchor_per_grid)
         rpn_pre_nms_top_n = {"train": self.cfg['rpn']['pre_nms_top_n_train'],
-                             "test": self.cfg['rpn']['post_nms_top_n_train']}
-        rpn_post_nms_top_n = {"train": self.cfg['rpn']['pre_nms_top_n_test'],
+                             "test": self.cfg['rpn']['pre_nms_top_n_test']}
+        rpn_post_nms_top_n = {"train": self.cfg['rpn']['post_nms_top_n_train'],
                               "test": self.cfg['rpn']['post_nms_top_n_test']}
         self.feature_keys = ['0', '1', '2', '3', 'pool']
 
